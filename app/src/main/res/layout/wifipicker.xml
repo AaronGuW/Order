@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/shadow"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#64000000"/>
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:background="#38B0DE"
+            android:text="New WIFI"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:gravity="center_vertical"
+            android:textSize="18sp"
+            android:paddingStart="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="350dp"
+            android:background="#EEFFFFFF">
+
+            <TextView
+                android:id="@+id/ssidhead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:layout_marginStart="10dp"
+                android:text="SSID:"/>
+
+            <TextView
+                android:id="@+id/ssid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Pick One"
+                android:textColor="#99757575"
+                android:layout_toEndOf="@+id/ssidhead"/>
+
+            <TextView
+                android:id="@+id/cntfirst"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/ssidhead"
+                android:layout_marginStart="190dp"
+                android:background="#FFFFFF"
+                android:text="Most"
+                android:textSize="12dp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/lastfirst"
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:layout_alignBottom="@+id/ssidhead"
+                android:layout_toEndOf="@+id/cntfirst"
+                android:background="#38B0DE"
+                android:textColor="#FFFFFF"
+                android:text="Last"
+                android:gravity="center"/>
+
+            <ListView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:padding="5dp"
+                android:layout_below="@+id/lastfirst"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:listSelector="#00000000"
+                android:background="#FFFFFF">
+
+            </ListView>
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#757575"
+                android:layout_below="@+id/list"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"/>
+
+            <LinearLayout
+                android:id="@+id/connected"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/divider"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Connected"
+                    android:textSize="12sp"/>
+
+                <com.example.aaron.order.ClickSwitchViewPager
+                    android:id="@+id/cmode"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp">
+
+                </com.example.aaron.order.ClickSwitchViewPager>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/disconnected"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/connected"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <TextView
+                    android:layout_width="80dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Disonnected"
+                    android:textSize="12sp"/>
+
+                <com.example.aaron.order.ClickSwitchViewPager
+                    android:id="@+id/dmode"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="10dp">
+
+                </com.example.aaron.order.ClickSwitchViewPager>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal"
+                android:layout_below="@+id/disconnected"
+                android:layout_marginTop="25dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/info"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="bottom"
+                    android:textSize="12sp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="#C1C1C1"
+                    android:text="New setting will take effect at next connection."/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#38B0DE">
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/normbtn"
+                android:text="CANCEL"/>
+            <View
+                android:layout_width="1px"
+                android:layout_height="40dp"
+                android:background="#CC000000"/>
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/normbtn"
+                android:text="SAVE"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

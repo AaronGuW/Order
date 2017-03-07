@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="190dp"
+    android:layout_height="75dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text="Pick Required Days"/>
+
+    <com.example.aaron.order.WeekDayPicker
+        android:id="@+id/weekdaypicker"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android_custom:Textcolor="#38B0DE"
+        android_custom:Textcolorunabled="#9EBFBF"
+        android_custom:Textsize="18sp"/>
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Order</string>
+    <string name="temp_event">One-Time</string>
+    <string name="regular_event">Routine</string>
+    <string name="event_list">Event List</string>
+    <string name="title_example">Operating System Concepts</string>
+    <string name="duration_eg">10:00 - 11:40 , Today</string>
+    <string name="note_eg">GOOD GOOD STUDY! DAY DAY UP!!! THE MAX IS 60! THE MAX IS 60!</string>
+    <string name="warning">The event is expired before creation!</string>
+</resources>

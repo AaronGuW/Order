@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/setting_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="3dp"/>
+
+    <Button
+        android:id="@+id/wifi"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/wifi_btn"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="56dp"
+        android:layout_marginTop="3dp"/>
+
+    <LinearLayout
+        android:id="@+id/headline"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="#88D0D1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:textColor="#FFFFFF"
+            android:text="17:55"
+            android:textSize="50sp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="15dp"/>
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:text="Tuesday, 17th November, 2015"
+            android:layout_marginStart="19dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#B6E4E5"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/temp"
+                android:layout_width="194dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:text="@string/temp_event"/>
+            <View
+                android:layout_width="2dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="2dp"
+                android:background="#FFFFFF"/>
+            <TextView
+                android:id="@+id/routine"
+                android:layout_width="194dp"
+                android:layout_height="match_parent"
+                android:textColor="#020202"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:layout_weight="1"
+                android:text="@string/regular_event"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cursor_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/headline"
+        android:background="#202929">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:text="@string/event_list"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"/>
+
+        <ImageView
+            android:id="@+id/cursor"
+            android:layout_width="fill_parent"
+            android:layout_height="8dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="matrix"
+            android:src="@drawable/cursor"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="118dp"
+        android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/add_event"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:background="@drawable/add_event_btn"/>
+    </LinearLayout>
+
+    <com.example.aaron.order.MyViewPager
+        android:id="@+id/event_list"
+        android:layout_below="@+id/cursor_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F8F8FF"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+    </com.example.aaron.order.MyViewPager>
+
+</RelativeLayout>

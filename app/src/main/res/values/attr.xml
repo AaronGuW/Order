@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SwitchButton">
+        <attr name="background_height" format="dimension"/>
+        <attr name="background_width" format="dimension"/>
+        <attr name="ThumbRadius" format="dimension"/>
+        <attr name="ThumbColor" format="color" />
+        <attr name="shadowColor" format="color" />
+        <attr name="Background" format="color" />
+        <attr name="BackgroundOffColor" format="color" />
+        <attr name="BackgroundOffFill" format="color" />
+        <attr name="ThumbOffColor" format="color" />
+        <attr name="IsOn" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="WeekDayPicker">
+        <attr name="Textcolor" format="color"></attr>
+        <attr name="Textcolorunabled" format="color"></attr>
+        <attr name="Textsize" format="dimension"></attr>
+    </declare-styleable>
+    <declare-styleable name="MyListView">
+        <attr name="hello" format="boolean"></attr>
+    </declare-styleable>
+</resources>

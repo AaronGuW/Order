@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/holder"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="#38B0DE">
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/back_btn"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Event"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="12dp"/>
+    </LinearLayout>
+
+    <com.example.aaron.order.ClickSwitchViewPager
+        android:id="@+id/scene"
+        android:layout_width="54dp"
+        android:layout_height="54dp"
+        android:padding="4dp"
+        android:layout_below="@+id/head"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        />
+
+    <TextView
+        android:id="@+id/T"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:text="Event Name"
+        android:layout_toEndOf="@+id/scene"
+        android:layout_alignTop="@+id/scene"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"/>
+
+    <EditText
+        android:id="@+id/title"
+        android:layout_width="200dp"
+        android:layout_height="34dp"
+        android:layout_toEndOf="@+id/scene"
+        android:layout_marginStart="10dp"
+        android:textSize="14sp"
+        android:layout_below="@+id/T"
+        android:layout_marginTop="5dp"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#757575"
+        android:layout_below="@+id/scene"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Event type"
+        android:textSize="12sp"
+        android:layout_below="@+id/divider"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"/>
+
+    <com.example.aaron.order.ClickSwitchViewPager
+        android:id="@+id/type_icon"
+        android:layout_below="@+id/type"
+        android:layout_width="60dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="5dp"
+        android:layout_alignStart="@+id/type"
+        android:padding="5dp">
+    </com.example.aaron.order.ClickSwitchViewPager>
+
+    <TextView
+        android:id="@+id/option"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:textSize="12sp"
+        android:text="Option"
+        android:layout_toEndOf="@+id/type"
+        android:layout_alignTop="@+id/type"
+        android:layout_marginStart="40dp"/>
+
+    <com.example.aaron.order.NonSlideViewPager
+        android:id="@+id/timesetting"
+        android:layout_below="@+id/option"
+        android:layout_width="200dp"
+        android:layout_height="85dp"
+        android:layout_alignStart="@+id/option"
+        android:padding="5dp">
+    </com.example.aaron.order.NonSlideViewPager>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#757575"
+        android:layout_below="@+id/type_icon"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/divider2"/>
+
+    <TextView
+        android:id="@+id/start"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="7:00"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_alignStart="@+id/duration"
+        android:layout_alignTop="@+id/duration"
+        android:layout_marginStart="66dp"/>
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:layout_alignStart="@+id/duration"
+        android:layout_alignTop="@+id/duration"
+        android:background="#777F7E"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="118dp"/>
+
+    <TextView
+        android:id="@+id/end"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="8:00"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_alignStart="@+id/duration"
+        android:layout_alignTop="@+id/duration"
+        android:layout_marginStart="130dp"/>
+
+    <TextView
+        android:id="@+id/modesetting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/duration"
+        android:layout_alignStart="@+id/duration"
+        android:text="Mode"
+        android:textSize="12sp"
+        android:layout_marginTop="16dp"/>
+
+    <com.example.aaron.order.ClickSwitchViewPager
+        android:id="@+id/dur_mode"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/mute"
+        android:layout_alignStart="@+id/modesetting"
+        android:layout_alignTop="@+id/modesetting"
+        android:layout_marginStart="80dp"/>
+
+    <View
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        android:layout_alignStart="@+id/modesetting"
+        android:layout_alignTop="@+id/modesetting"
+        android:background="#777F7E"
+        android:layout_marginTop="11dp"
+        android:layout_marginStart="118dp"/>
+
+    <com.example.aaron.order.ClickSwitchViewPager
+        android:id="@+id/end_mode"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:src="@drawable/sound"
+        android:layout_alignStart="@+id/modesetting"
+        android:layout_alignTop="@+id/modesetting"
+        android:layout_marginStart="140dp"/>
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Note"
+        android:textSize="12sp"
+        android:layout_below="@+id/modesetting"
+        android:layout_alignStart="@+id/modesetting"
+        android:layout_marginTop="16dp"/>
+
+    <EditText
+        android:id="@+id/notebody"
+        android:layout_width="240dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@+id/note"
+        android:layout_alignTop="@+id/note"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="5dp"
+        android:padding="8dp"
+        android:textSize="12sp"
+        android:textColorHint="#52000000"
+        android:hint="60 characters at most."
+        android:gravity="top"
+        android:background="@drawable/notebg"/>
+
+    <LinearLayout
+        android:id="@+id/warningbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/notebody"
+        android:layout_marginTop="20dp"
+        android:layout_alignStart="@+id/note"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/warning"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/warning"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="2dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#38B0DE"
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/normbtn"
+            android:text="CANCEL"/>
+        <View
+            android:layout_width="1px"
+            android:layout_height="40dp"
+            android:background="#CC000000"/>
+        <Button
+            android:id="@+id/save"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/normbtn"
+            android:text="SAVE"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

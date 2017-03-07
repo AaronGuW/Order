@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="365dp"
+    android:layout_height="98dp"
+    android:background="#E0E0E0"
+    android:paddingRight="10dp"
+    android:paddingBottom="4dp">
+
+    <ImageView
+        android:id="@+id/eventstatus"
+        android:layout_width="30dp"
+        android:layout_height="17dp"
+        android:src="@drawable/expired"/>
+
+    <ImageView
+        android:id="@+id/scene"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/classroom"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="180dp"
+        android:layout_height="18dp"
+        android:layout_toRightOf="@+id/scene"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="6dp"
+        android:text="@string/title_example"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/duration"
+        android:layout_width="100dp"
+        android:layout_height="15dp"
+        android:layout_alignStart="@+id/title"
+        android:layout_marginStart="5dp"
+        android:textSize="8sp"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="2dp"
+        android:text="@string/duration_eg"/>
+
+    <ImageView
+        android:id="@+id/duration_mode"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_below="@+id/title"
+        android:layout_toEndOf="@+id/duration"
+        android:src="@drawable/vibrate"/>
+
+    <ImageView
+        android:id="@+id/arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:layout_toEndOf="@+id/duration_mode"
+        android:layout_alignTop="@+id/duration_mode"
+        android:layout_marginTop="1dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/arrow"/>
+
+    <ImageView
+        android:id="@+id/end_mode"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:layout_alignTop="@+id/duration_mode"
+        android:layout_toEndOf="@+id/arrow"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/sound"/>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="180dp"
+        android:layout_height="1dp"
+        android:background="#AEA592"
+        android:layout_toEndOf="@+id/scene"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="1dp"
+        android:layout_below="@+id/duration"/>
+
+    <ImageView
+        android:id="@+id/notes"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/notes"
+        android:layout_marginTop="2dp"
+        android:layout_marginStart="-5dp"
+        android:layout_below="@+id/divider"
+        android:layout_alignStart="@+id/title"/>
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_toEndOf="@+id/notes"
+        android:layout_below="@+id/divider"
+        android:padding="2dp"
+        android:textSize="10sp"
+        android:layout_marginStart="0.5dp"
+        android:layout_marginTop="0dp"
+        android:text="@string/note_eg"/>
+
+
+    <com.example.aaron.order.SwitchButton
+        android:id="@+id/status"
+        android:layout_height="38dp"
+        android:layout_width="73dp"
+        android:layout_toEndOf="@+id/title"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="18dp"
+        android_custom:background_width="55dp"
+        android_custom:background_height="20dp"
+        android_custom:ThumbRadius="15dp"
+        android_custom:Background="#33B28A"
+        android_custom:BackgroundOffFill="#00FFFFFF"
+        android_custom:ThumbColor="#03553F"
+        android_custom:shadowColor="#42000000"
+        android_custom:IsOn="true">
+    </com.example.aaron.order.SwitchButton>
+
+</RelativeLayout>
